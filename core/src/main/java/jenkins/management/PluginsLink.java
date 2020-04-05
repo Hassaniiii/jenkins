@@ -24,6 +24,7 @@
 
 package jenkins.management;
 
+import java.util.Locale;
 import hudson.Extension;
 import hudson.model.ManagementLink;
 import org.jenkinsci.Symbol;
@@ -42,12 +43,12 @@ public class PluginsLink extends ManagementLink {
     }
 
     public String getDisplayName() {
-        return Messages.PluginsLink_DisplayName();
+        return Messages.PluginsLink_DisplayName(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return Messages.PluginsLink_Description();
+        return Messages.PluginsLink_Description(new Locale("fi", ""));
     }
 
     @Override

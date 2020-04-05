@@ -23,6 +23,7 @@
  */
 
 package jenkins.management;
+import java.util.Locale;
 
 import hudson.Extension;
 import hudson.model.ManagementLink;
@@ -42,12 +43,12 @@ public class SystemLogLink extends ManagementLink {
     }
 
     public String getDisplayName() {
-        return Messages.SystemLogLink_DisplayName();
+        return Messages.SystemLogLink_DisplayName(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return Messages.SystemLogLink_Description();
+        return Messages.SystemLogLink_Description(new Locale("fi", ""));
     }
 
     @Override

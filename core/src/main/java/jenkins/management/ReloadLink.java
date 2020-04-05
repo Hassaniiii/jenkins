@@ -24,6 +24,7 @@
 
 package jenkins.management;
 
+import java.util.Locale;
 import hudson.Extension;
 import hudson.model.ManagementLink;
 import org.jenkinsci.Symbol;
@@ -42,12 +43,12 @@ public class ReloadLink extends ManagementLink {
     }
 
     public String getDisplayName() {
-        return Messages.ReloadLink_DisplayName();
+        return Messages.ReloadLink_DisplayName(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return Messages.ReloadLink_Description();
+        return Messages.ReloadLink_Description(new Locale("fi", ""));
     }
 
     @Override

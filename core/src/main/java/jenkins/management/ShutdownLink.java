@@ -24,6 +24,7 @@
 
 package jenkins.management;
 
+import java.util.Locale;
 import hudson.Extension;
 import hudson.model.ManagementLink;
 import hudson.security.Permission;
@@ -44,12 +45,12 @@ public class ShutdownLink extends ManagementLink {
     }
 
     public String getDisplayName() {
-        return Jenkins.get().isQuietingDown() ? Messages.ShutdownLink_DisplayName_cancel() : Messages.ShutdownLink_DisplayName_prepare();
+        return Jenkins.get().isQuietingDown() ? Messages.ShutdownLink_DisplayName_cancel(new Locale("fi", "")) : Messages.ShutdownLink_DisplayName_prepare(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return Jenkins.get().isQuietingDown() ? "" : Messages.ShutdownLink_Description();
+        return Jenkins.get().isQuietingDown() ? "" : Messages.ShutdownLink_Description(new Locale("fi", ""));
     }
 
     @Override

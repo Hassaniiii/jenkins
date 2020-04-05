@@ -23,6 +23,7 @@
  */
 package jenkins.tools;
 
+import java.util.Locale;
 import hudson.Extension;
 import hudson.Functions;
 import hudson.model.Descriptor;
@@ -56,12 +57,12 @@ public class GlobalToolConfiguration extends ManagementLink {
 
     @Override
     public String getDisplayName() {
-        return jenkins.management.Messages.ConfigureTools_DisplayName();
+        return jenkins.management.Messages.ConfigureTools_DisplayName(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return jenkins.management.Messages.ConfigureTools_Description();
+        return jenkins.management.Messages.ConfigureTools_Description(new Locale("fi", ""));
     }
 
     @Override

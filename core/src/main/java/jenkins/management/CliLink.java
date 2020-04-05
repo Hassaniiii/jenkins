@@ -24,6 +24,7 @@
 
 package jenkins.management;
 
+import java.util.Locale;
 import hudson.Extension;
 import hudson.model.ManagementLink;
 import hudson.security.Permission;
@@ -44,12 +45,12 @@ public class CliLink extends ManagementLink {
     }
 
     public String getDisplayName() {
-        return Messages.CliLink_DisplayName();
+        return Messages.CliLink_DisplayName(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return Messages.CliLink_Description();
+        return Messages.CliLink_Description(new Locale("fi", ""));
     }
 
     @Nonnull
