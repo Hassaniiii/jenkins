@@ -1,5 +1,6 @@
 package hudson;
 
+import java.util.Locale;
 import hudson.model.ManagementLink;
 import hudson.security.Permission;
 import java.net.URL;
@@ -28,12 +29,12 @@ public class AboutJenkins extends ManagementLink {
     }
 
     public String getDisplayName() {
-        return Messages.AboutJenkins_DisplayName();
+        return Messages.AboutJenkins_DisplayName(new Locale("fi", ""));
     }
 
     @Override
     public String getDescription() {
-        return Messages.AboutJenkins_Description();
+        return Messages.AboutJenkins_Description(new Locale("fi", ""));
     }
 
     @Restricted(NoExternalUse.class)

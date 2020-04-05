@@ -4739,6 +4739,10 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
 
     // for Jelly
     public List<ManagementLink> getManagementLinks() {
+        for (ManagementLink link : ManagementLink.all()) {
+            System.out.println("** ** ** instance: " + link.getDisplayName());
+        }
+
         return ManagementLink.all();
     }
 
