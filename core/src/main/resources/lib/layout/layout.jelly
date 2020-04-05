@@ -196,6 +196,10 @@ THE SOFTWARE.
                     searchHelpUrl="${%searchBox.url}"
                     logout="${%logout}"/>
 
+      <l:searchHeader title="${%title}"
+                    searchPlaceholder="${%search}"
+                    searchHelpUrl="${%searchBox.url}"/>
+
       <div id="breadcrumbBar">
         <l:breadcrumbBar>
           <j:set var="mode" value="breadcrumbs" />

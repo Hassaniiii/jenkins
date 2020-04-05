@@ -1,0 +1,42 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:i="jelly:fmt" xmlns:x="jelly:xml">
+
+<tr id="top-nav">
+    <td id="left-top-nav" colspan="2">
+      <st:adjunct includes="lib.layout.breadcrumbs" />
+      <div class="top-sticker noedge">
+        <div class="top-sticker-inner">
+          <div class="breadcrumbs__wrapper">
+
+            <div class="searchbox visible-xs">
+            <!-- search box -->
+            <j:set var="searchURL" value="${h.searchURL}"/>
+            <form action="${searchURL}" method="get" style="position:relative;" class="no-json" name="search" role="search">
+                <!-- this div is used to calculate the width of the text box -->
+                <div id="search-box-sizer"/>
+                <div id="searchform">
+                    <input name="q" placeholder="${searchPlaceholder}" id="search-box" class="main-search__input has-default-text" value="${request.getParameter('q')}" role="searchbox" />
+
+                    <span class="main-search__icon-leading">
+                        <l:svgIcon href="${resURL}/images/material-icons/svg-sprite-action-symbol.svg#ic_search_24px" />
+                    </span>
+                    <a href="${searchHelpUrl}" class="main-search__icon-trailing">
+                        <l:svgIcon href="${resURL}/images/material-icons/svg-sprite-action-symbol.svg#ic_help_outline_24px" />
+                    </a>
+
+                    <div id="search-box-completion" />
+                    <script>createSearchBox("${searchURL}");</script>
+                </div>
+            </form>
+        </div>
+
+            <div id="breadcrumb-menu-target"/><!-- this is where the menu gets rendered -->
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+
+ 
+</j:jelly>
+
